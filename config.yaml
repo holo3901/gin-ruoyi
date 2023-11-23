@@ -1,0 +1,58 @@
+app:
+  name: "web_app"
+  mode: "dev"
+  start_time: "2023-10-03"
+  machine_id: 1
+  version: "v0.0.1"
+  port: 8081
+  loginCode: "Number"  #登录验证码,Arithmetic 算数 、Number 数字
+auth:
+  jwt_expire: 2 #定义过期时间,以两小时为例
+log:
+  level: "debug"
+  filename: "web_app.log"
+  max_size: 200
+  max_age: 30
+  max_backups: 7
+
+mysql:
+  host: "127.0.0.1"
+  port: 3306
+  user: "root"
+  password: "root1234"
+  dbname: "ry-go"
+  max_open_conns: 200
+  max_idle_conns: 50
+
+redis:
+  host: "127.0.0.1"
+  port: 6379
+  db: 0
+  password: ""
+  pool_size: 100
+
+
+qiniu:
+  access_key: 
+  serect_key: 
+  bucket: 
+  qiniuServe: 
+
+email:
+  smtp_host: smtp.qq.com
+  smtp_email: 
+  smtp_pass:
+
+live:
+  pull_domain: #拉流域名
+  PullKey:   #拉流key
+  push_domain: #推流域名
+  PushKey: #推流key
+  app_name: live
+  ts: 7200 #直播时间
+  endpoint: live.tecentCloudapi.com
+
+tencentcloudsecret:
+  secret_id: 
+  secret_key: 
+
